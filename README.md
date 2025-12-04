@@ -19,6 +19,7 @@ Full-Stack Cloud Engineer specializing in:
 - **Framework:** [Astro](https://astro.build/) - Modern static site generator
 - **Styling:** [TailwindCSS](https://tailwindcss.com/) - Utility-first CSS framework
 - **Hosting:** [Netlify](https://netlify.com/) - Serverless deployment platform
+- **Analytics:** [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/) - Privacy-friendly, lightweight analytics
 - **Forms:** Netlify Forms - Contact form handling
 - **DNS:** Dynadot DNS with A record and CNAME
 - **Domain:** Custom domain with automatic SSL/TLS
