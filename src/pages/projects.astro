@@ -1,0 +1,117 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const projects = [
+  {
+    title: "AWS BudgetMaster Pro",
+    description: "Serverless YNAB-style budgeting app with AI receipt scanning using Textract OCR, real-time syncing, and PWA mobile support.",
+    benefit: "Results: Automated expense tracking, reduced manual data entry by 90%, improved budget visibility for teams.",
+    tech: ["React", "Lambda", "DynamoDB", "Textract", "OCR"],
+    github: "https://github.com/julianmolinagoni/aws-budgetmaster-pro",
+    featured: true
+  },
+  {
+    title: "AWS Cost Optimizer",
+    description: "Automated AWS cost analysis engine with EventBridge scheduling, alerts, and CloudFormation deployment.",
+    benefit: "Results: Identified 40%+ cost savings opportunities, automated daily monitoring, improved developer visibility.",
+    tech: ["Python", "Boto3", "Lambda", "EventBridge"],
+    github: "https://github.com/julianmolinagoni/aws-cost-optimizer",
+    featured: true
+  },
+  {
+    title: "DiskSpace Analyzer Pro",
+    description: "C# WPF desktop app featuring TreeMap visualization, file age analysis, and professional cleanup recommendations.",
+    benefit: "Results: Reduced cleanup time by 75%, visual insights for IT teams, automated cleanup recommendations.",
+    tech: ["C#", "WPF", "TreeMap", "Material Design"],
+    github: "https://github.com/julianmolinagoni/diskspace-analyzer-pro",
+    featured: true
+  },
+  {
+    title: "WordPress Command Center",
+    description: "Multi-site WordPress administration tool with backups, scanning, dashboards, Docker deployment, and API integration.",
+    benefit: "Results: Centralized management of 10+ sites, automated security scanning, reduced maintenance time by 60%.",
+    tech: ["FastAPI", "React", "Docker", "WP REST API"],
+    github: "https://github.com/julianmolinagoni/wordpress-command-center",
+    featured: false
+  },
+  {
+    title: "Email Cleanup Tool",
+    description: "Gmail cleanup automation that analyzes mailboxes, performs safe deletes/archives, and generates backup snapshots.",
+    benefit: "Results: Freed 85% of storage space, automated cleanup workflows, safe backup system for peace of mind.",
+    tech: ["Python", "Gmail API", "OAuth2"],
+    github: "https://github.com/julianmolinagoni/email-cleanup-tool",
+    featured: false
+  },
+  {
+    title: "NHL Scoreboard",
+    description: "Live NHL scoreboard with carousel mode, team logos, notifications, and Raspberry Pi deployment.",
+    benefit: "Results: Real-time sports data display, low-cost Raspberry Pi deployment, perfect for offices and fan caves.",
+    tech: ["JavaScript", "React", "Docker", "Raspberry Pi"],
+    github: "https://github.com/julianmolinagoni/nhl-scoreboard",
+    featured: false
+  },
+  {
+    title: "AWS S3 Audit Tool",
+    description: "Comprehensive S3 security audit tool identifying public buckets, missing encryption, and generating detailed reports.",
+    benefit: "Results: Identified 15+ security vulnerabilities, automated compliance reporting, improved security posture.",
+    tech: ["Python", "Boto3", "Security", "AWS CLI"],
+    github: "https://github.com/julianmolinagoni/aws-s3-audit-tool",
+    featured: false
+  }
+];
+---
+
+<Layout title="Projects - Julian Molina-Goni">
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h1 class="text-4xl font-bold text-center mb-12">Featured Projects</h1>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {projects.map((project) => (
+          <div class="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-xl font-semibold text-blue-400">{project.title}</h3>
+              {project.featured && (
+                <span class="bg-blue-600 px-2 py-1 rounded text-xs font-semibold">Featured</span>
+              )}
+            </div>
+            
+            <p class="text-gray-300 mb-3 leading-relaxed">{project.description}</p>
+            {project.benefit && (
+              <p class="text-green-400 text-sm mb-4 font-medium italic">{project.benefit}</p>
+            )}
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              {project.tech.map((tech) => (
+                <span class="bg-gray-700 px-2 py-1 rounded text-sm text-gray-300">{tech}</span>
+              ))}
+            </div>
+            
+            <div class="flex gap-4">
+              <a 
+                href={project.github} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded font-semibold transition-colors text-sm"
+              >
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      <div class="text-center mt-12">
+        <p class="text-gray-400 mb-4">More projects coming soon as repositories are uploaded to GitHub</p>
+        <a 
+          href="https://github.com/julianmolinagoni" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="border border-blue-600 hover:bg-blue-600 px-6 py-3 rounded-lg font-semibold transition-colors"
+        >
+          View GitHub Profile
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

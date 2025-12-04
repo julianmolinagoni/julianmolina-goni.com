@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Julian Molina-Goni - Full-Stack Cloud Engineer">
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center">
+    <div class="absolute inset-0">
+      <img src="/assets/banner.png" alt="Portfolio banner for Full-Stack Cloud Engineer Julian Molina-Goni" class="w-full h-full object-cover opacity-20" />
+    </div>
+    <div class="relative max-w-6xl mx-auto px-4 text-center">
+      <h1 class="text-3xl sm:text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+        Julian Molina-Goni
+      </h1>
+      <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 px-4">
+        Full-Stack Cloud Engineer • Automation Specialist • AWS & DevOps
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center px-4">
+        <a href="/projects" class="bg-blue-600 hover:bg-blue-700 px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors">
+          View Projects
+        </a>
+        <a href="/contact" class="border border-blue-600 hover:bg-blue-600 px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors">
+          Get In Touch
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Stats -->
+  <section class="py-8 md:py-16 bg-gray-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-3 gap-4 text-center">
+        <div>
+          <h3 class="text-2xl md:text-3xl font-bold text-blue-400 mb-2">10+</h3>
+          <p class="text-gray-300 text-sm md:text-base">Years Experience</p>
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-bold text-blue-400 mb-2">7</h3>
+          <p class="text-gray-300 text-sm md:text-base">Featured Projects</p>
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-bold text-blue-400 mb-2">3</h3>
+          <p class="text-gray-300 text-sm md:text-base">Certifications</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Preview -->
+  <section class="py-8 md:py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Top Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href="https://github.com/julianmolinagoni/aws-budgetmaster-pro" target="_blank" rel="noopener noreferrer" class="bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-colors block">
+          <h3 class="text-lg font-semibold mb-2 text-blue-400">AWS BudgetMaster Pro</h3>
+          <p class="text-gray-300 text-sm mb-2">Serverless budgeting app with AI receipt scanning</p>
+          <p class="text-blue-300 text-xs mb-3 italic">Helps teams track and categorize expenses with automated OCR</p>
+          <div class="flex flex-wrap gap-1">
+            <span class="bg-blue-600 px-2 py-1 rounded text-xs">React</span>
+            <span class="bg-blue-600 px-2 py-1 rounded text-xs">AWS</span>
+          </div>
+        </a>
+        <a href="https://github.com/julianmolinagoni/aws-cost-optimizer" target="_blank" rel="noopener noreferrer" class="bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-colors block">
+          <h3 class="text-lg font-semibold mb-2 text-blue-400">AWS Cost Optimizer</h3>
+          <p class="text-gray-300 text-sm mb-2">Automated cost analysis with alerts</p>
+          <p class="text-blue-300 text-xs mb-3 italic">Gives engineers daily insight into AWS waste and optimization opportunities</p>
+          <div class="flex flex-wrap gap-1">
+            <span class="bg-blue-600 px-2 py-1 rounded text-xs">Python</span>
+            <span class="bg-blue-600 px-2 py-1 rounded text-xs">Lambda</span>
+          </div>
+        </a>
+        <a href="https://github.com/julianmolinagoni/diskspace-analyzer-pro" target="_blank" rel="noopener noreferrer" class="bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-colors block">
+          <h3 class="text-lg font-semibold mb-2 text-blue-400">DiskSpace Analyzer Pro</h3>
+          <p class="text-gray-300 text-sm mb-2">Desktop app with TreeMap visualization</p>
+          <p class="text-blue-300 text-xs mb-3 italic">Helps IT teams identify and clean up disk space bottlenecks efficiently</p>
+          <div class="flex flex-wrap gap-1">
+            <span class="bg-blue-600 px-2 py-1 rounded text-xs">C#</span>
+            <span class="bg-blue-600 px-2 py-1 rounded text-xs">WPF</span>
+          </div>
+        </a>
+      </div>
+      <div class="text-center mt-6">
+        <a href="/projects" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition-colors">
+          View All Projects
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
