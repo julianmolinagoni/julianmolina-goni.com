@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { projects } from '../data/projects';
+---
+
+<Layout title="Fiverr Portfolio - Julian Molina-Goni (jmgcloudpro)">
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Intro -->
+      <header class="mb-10 text-center">
+        <h1 class="text-3xl sm:text-4xl font-bold text-white mb-3">
+          Fiverr Portfolio & Sample Projects
+        </h1>
+        <p class="text-gray-300 text-sm sm:text-base max-w-3xl mx-auto">
+          This page showcases selected projects and tools I've built as a Full-Stack Cloud Engineer
+          and Automation Specialist. If you're viewing this from Fiverr, my username is
+          <span class="font-semibold text-blue-400">jmgcloudpro</span>, and all work performed
+          through Fiverr is subject to Fiverr's Terms of Service.
+        </p>
+      </header>
+
+      <!-- Projects Grid -->
+      <section aria-label="Featured projects for Fiverr clients">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {projects.map((project) => (
+            <article class="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors">
+              <div class="flex justify-between items-start mb-4">
+                <h2 class="text-xl font-semibold text-blue-400">
+                  {project.title}
+                </h2>
+                {project.featured && (
+                  <span class="bg-blue-600 px-2 py-1 rounded text-xs font-semibold">
+                    Featured
+                  </span>
+                )}
+              </div>
+
+              <p class="text-gray-300 mb-3 leading-relaxed">
+                {project.description}
+              </p>
+
+              {project.benefit && (
+                <p class="text-green-400 text-sm mb-4 font-medium italic">
+                  {project.benefit}
+                </p>
+              )}
+
+              <div class="flex flex-wrap gap-2 mb-4">
+                {project.tech.map((tech) => (
+                  <span class="bg-gray-700 px-2 py-1 rounded text-xs text-gray-200">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <div class="flex gap-4">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded font-semibold transition-colors text-xs sm:text-sm"
+                >
+                  View on GitHub
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <!-- Fiverr-Specific Notes & Disclaimers -->
+      <section class="mt-14 max-w-3xl mx-auto text-sm text-gray-300 space-y-5">
+        <h2 class="text-xl font-semibold text-blue-400">
+          Working With Me Through Fiverr
+        </h2>
+        <p>
+          If you discovered this page from Fiverr, please note that all communication, proposals,
+          and payments for Fiverr projects must remain on the Fiverr platform under the username
+          <span class="font-semibold text-blue-400"> jmgcloudpro</span>. This page is provided
+          solely as a portfolio reference to show examples of past work.
+        </p>
+
+        <p>
+          For Fiverr orders, the terms, policies, and protections of Fiverr's platform apply,
+          including Fiverr's Terms of Service, dispute processes, and payment handling. My own
+          website's <a href="/terms" class="text-blue-400 hover:text-blue-300">
+          Terms & Disclaimer</a> apply to any work agreed and performed outside of Fiverr.
+        </p>
+
+        <p class="text-xs text-gray-400">
+          This page is for portfolio viewing only. If you are a Fiverr buyer,
+          please communicate, place orders, and request revisions only through Fiverr.
+        </p>
+      </section>
+    </div>
+  </section>
+</Layout>

@@ -15,9 +15,7 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
     
-    <!-- Cloudflare Web Analytics -->
-    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "767d7017df494414bfb8eca71539b46c"}'></script>
-    <!-- End Cloudflare Web Analytics -->
+
   </head>
   <body class="bg-gray-900 text-white">
     <nav class="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm z-50 border-b border-gray-800">
@@ -74,6 +72,9 @@ const { title } = Astro.props;
     <footer class="bg-gray-800 py-8">
       <div class="max-w-6xl mx-auto px-6 text-center text-gray-400">
         <p>&copy; 2025 Julian Molina-Goni. All rights reserved.</p>
+        <div class="mt-3 text-sm">
+          <a href="/terms" class="hover:text-blue-400 transition-colors">Terms & Disclaimer</a>
+        </div>
       </div>
     </footer>
   </body>
